@@ -9,7 +9,7 @@ describe('Record Collector', function() {
     recordCollector = new RecordCollector();
   });
 
-  xit('should have a collection, starts empty', function() {
+  it('should have a collection, starts empty', function() {
     assert.deepStrictEqual(recordCollector.collection, []);
   });
 
