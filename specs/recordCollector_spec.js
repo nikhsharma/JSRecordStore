@@ -53,7 +53,7 @@ describe('Record Collector', function() {
     assert.strictEqual(recordCollector.totalValueByGenre('Alternative'), 15.99);
   });
 
-  xit('should be able to view their most valuable record', function() {
+  it('should be able to view their most valuable record', function() {
     const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
     const record2 = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     recordCollector.buy(record);
