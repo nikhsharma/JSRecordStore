@@ -1,4 +1,5 @@
 const RecordStore = require('../RecordStore');
+const Record = require('../Record');
 const assert = require('assert');
 
 describe('Record Store', function() {
@@ -25,7 +26,7 @@ describe('Record Store', function() {
     assert.strictEqual(recordStore.balance, 1000);
   });
 
-  xit('should be able to add Records to inventory', function() {
+  it('should be able to add Records to inventory', function() {
     const record = new Record('test', 'test', 'test', 10);
     recordStore.add(record);
     assert.deepStrictEqual(recordStore.inventory, [record])

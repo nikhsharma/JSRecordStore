@@ -5,4 +5,8 @@ const RecordStore = function(name, city, balance) {
   this.balance = balance;
 }
 
+RecordStore.prototype.add = function(record) {
+    this.inventory.push(record);
+}
+
 module.exports = RecordStore;
