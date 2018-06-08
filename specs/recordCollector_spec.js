@@ -6,14 +6,14 @@ describe('Record Collector', function() {
   let recordCollector;
 
   beforeEach(function() {
-    recordCollector = new RecordCollector();
+    recordCollector = new RecordCollector(100);
   });
 
   it('should have a collection, starts empty', function() {
     assert.deepStrictEqual(recordCollector.collection, []);
   });
 
-  xit('should have cash', function() {
+  it('should have cash', function() {
     assert.strictEqual(recordCollector.cash, 100);
   });
 
