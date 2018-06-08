@@ -33,7 +33,15 @@ describe('Record Store', function() {
   });
 
   it('should print all details of a record as a string', function() {
-    record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
     assert.strictEqual(recordStore.displayDetails(record), 'Artist: Courtney Barnett, Title: Tell Me How You Really Feel, Genre: Alternative, Price: 15.99');
+  });
+
+  it('should print details of all inventory', function() {
+    const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    const record2 = new Record('test', 'test', 'test', 10);
+    recordStore.add(record);
+    recordStore.add(record2);
+    assert.strictEqual(recordStore.displayAll().length, 2);
   });
 });

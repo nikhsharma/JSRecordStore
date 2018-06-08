@@ -13,4 +13,12 @@ RecordStore.prototype.displayDetails = function(record) {
   return 'Artist: ' + record.artist + ', Title: ' + record.title + ', Genre: ' + record.genre + ', Price: ' + record.price;
 }
 
+RecordStore.prototype.displayAll = function() {
+  let res = [];
+  this.inventory.forEach(function(record) {
+    res.push(this.displayDetails(record));
+  }.bind(this));
+  return res;
+}
+
 module.exports = RecordStore;
