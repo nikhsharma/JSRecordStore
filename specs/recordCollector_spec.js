@@ -31,7 +31,7 @@ describe('Record Collector', function() {
     assert.deepStrictEqual(recordCollector.collection, []);
   });
 
-  xit('shouldn\'t be able to buy a record if they can\'t afford it', function() {
+  it('shouldn\'t be able to buy a record if they can\'t afford it', function() {
     const record = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     recordCollector.cash = 10;
     recordCollector.buy(record);

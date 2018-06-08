@@ -4,8 +4,10 @@ const RecordCollector = function (cash) {
 }
 
 RecordCollector.prototype.buy = function(record) {
+  if (record.price <= this.cash) {
     this.cash -= record.price;
     this.collection.push(record);
+  }
 }
 
 RecordCollector.prototype.sell = function(record) {
