@@ -15,4 +15,10 @@ RecordCollector.prototype.sell = function(record) {
     this.cash += record.price;
 }
 
+RecordCollector.prototype.totalValue = function() {
+  return this.collection.reduce(function(acc, record) {
+    return acc + record.price;
+  }, 0);
+}
+
 module.exports = RecordCollector;

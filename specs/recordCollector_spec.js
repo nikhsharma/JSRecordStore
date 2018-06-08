@@ -39,8 +39,8 @@ describe('Record Collector', function() {
     assert.deepStrictEqual(recordCollector.collection, []);
   });
 
-  xit('should be able to view total value of their collection', function() {
-    rd('Atoms For Peace', 'Amok', 'Electronic', 13.99);
+  it('should be able to view total value of their collection', function() {
+    const record = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     recordCollector.buy(record);
     assert.strictEqual(recordCollector.totalValue(), 13.99);
   });
