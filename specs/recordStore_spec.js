@@ -6,10 +6,10 @@ describe('Record Store', function() {
   let recordStore;
 
   beforeEach(function() {
-    recordStore = new RecordStore();
+    recordStore = new RecordStore('Round Records');
   });
 
-  xit('should have a name', function() {
+  it('should have a name', function() {
     assert.strictEqual(recordStore.name, 'Round Records');
   });
 
