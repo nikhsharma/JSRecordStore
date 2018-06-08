@@ -71,14 +71,14 @@ describe('Record Collector', function() {
     assert.deepStrictEqual(recordCollector.sortByValue(), [record, record2, record3]);
   });
 
-  xit('should be able to compare the value of their collection agains another collector', function() {
-    const recordCollector2 = new RecordCollector();
+  it('should be able to compare the value of their collection agains another collector', function() {
+    const recordCollector2 = new RecordCollector(100);
     const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
     const record2 = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     const record3 = new Record('Bully', 'Losing', 'Rock', 10.99);
     recordCollector.buy(record);
-    recordCollector.buy(record);
-    recordCollector2.buy(record);
+    recordCollector.buy(record2);
+    recordCollector2.buy(record3);
     assert.strictEqual(recordCollector.compare(recordCollector2), 'Your value: £29.98, theirs: £10.99')
   });
 });

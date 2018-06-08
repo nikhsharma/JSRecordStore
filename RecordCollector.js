@@ -37,4 +37,8 @@ RecordCollector.prototype.sortByValue = function() {
   return this.collection.sort((a,b) => b.price - a.price);
 }
 
+RecordCollector.prototype.compare = function(collector) {
+  return 'Your value: £' + this.totalValue() + ', theirs: £' + collector.totalValue();
+}
+
 module.exports = RecordCollector;
