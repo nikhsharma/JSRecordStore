@@ -30,7 +30,11 @@ RecordCollector.prototype.totalValueByGenre = function(genre) {
 }
 
 RecordCollector.prototype.mostValuable = function() {
-  return this.collection.sort((a,b) => b-a)[0];
+  return this.sortByValue()[0];
+}
+
+RecordCollector.prototype.sortByValue = function() {
+  return this.collection.sort((a,b) => b.price - a.price);
 }
 
 module.exports = RecordCollector;
