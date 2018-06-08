@@ -24,7 +24,7 @@ describe('Record Collector', function() {
     assert.deepStrictEqual(recordCollector.collection, [record]);
   });
 
-  xit('should be able to sell a record', function() {
+  it('should be able to sell a record', function() {
     const record = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     recordCollector.buy(record);
     recordCollector.sell(record);
