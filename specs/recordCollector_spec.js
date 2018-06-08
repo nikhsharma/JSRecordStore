@@ -1,4 +1,5 @@
 const RecordCollector = require('../RecordCollector');
+const Record = require('../Record');
 const assert = require('assert');
 
 describe('Record Collector', function() {
@@ -17,7 +18,7 @@ describe('Record Collector', function() {
     assert.strictEqual(recordCollector.cash, 100);
   });
 
-  xit('should be able to buy a record', function() {
+  it('should be able to buy a record', function() {
     const record = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
     recordCollector.buy(record);
     assert.deepStrictEqual(recordCollector.collection, [record]);
