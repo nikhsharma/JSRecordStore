@@ -23,9 +23,5 @@ describe('Record', function() {
 
   it('should have a price', function() {
     assert.strictEqual(record.price, 15.99);
-  })
-
-  it('should print all details as a string', function() {
-    assert.strictEqual(record.displayDetails(), 'Artist: Courtney Barnett, Title: Tell Me How You Really Feel, Genre: Alternative, Price: 15.99');
   });
 });

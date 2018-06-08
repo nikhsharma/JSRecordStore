@@ -5,8 +5,4 @@ const Record = function(artist, title, genre, price) {
   this.price = price;
 }
 
-Record.prototype.displayDetails = function() {
-  return ('Artist: ' + this.artist + ', Title: ' + this.title + ', Genre: ' + this.genre + ', Price: ' + this.price);
-}
-
 module.exports = Record;

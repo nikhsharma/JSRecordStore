@@ -9,4 +9,8 @@ RecordStore.prototype.add = function(record) {
     this.inventory.push(record);
 }
 
+RecordStore.prototype.displayDetails = function(record) {
+  return 'Artist: ' + record.artist + ', Title: ' + record.title + ', Genre: ' + record.genre + ', Price: ' + record.price;
+}
+
 module.exports = RecordStore;

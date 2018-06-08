@@ -31,4 +31,9 @@ describe('Record Store', function() {
     recordStore.add(record);
     assert.deepStrictEqual(recordStore.inventory, [record])
   });
+
+  it('should print all details of a record as a string', function() {
+    record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    assert.strictEqual(recordStore.displayDetails(record), 'Artist: Courtney Barnett, Title: Tell Me How You Really Feel, Genre: Alternative, Price: 15.99');
+  });
 });
