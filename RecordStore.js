@@ -1,7 +1,8 @@
-const RecordStore = function(name, city) {
+const RecordStore = function(name, city, balance) {
   this.name = name;
   this.city = city;
   this.inventory = [];
+  this.balance = balance;
 }
 
 module.exports = RecordStore;
