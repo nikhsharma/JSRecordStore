@@ -58,4 +58,12 @@ describe('Record Store', function() {
     recordStore.add(record);
     assert.strictEqual(recordStore.finances(), 'Balance: 1000, Stock Value: 15.99');
   });
+
+  it('should be able to display all records by genre', function() {
+    const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    const record2 = new Record('Atoms For Peace', 'Amok', 'Electronic', 13.99);
+    recordStore.add(record);
+    recordStore.add(record2);
+    assert.deepStrictEqual(recordStore.showByGenre('Electronic'), [record2]);
+  });
 });

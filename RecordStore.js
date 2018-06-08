@@ -33,4 +33,8 @@ RecordStore.prototype.finances = function() {
   return 'Balance: ' + this.balance + ', Stock Value: ' + stockValue;
 }
 
+RecordStore.prototype.showByGenre = function(genre) {
+  return this.inventory.filter(record => record.genre === genre);
+}
+
 module.exports = RecordStore;
