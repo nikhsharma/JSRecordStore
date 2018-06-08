@@ -6,14 +6,14 @@ describe('Record Store', function() {
   let recordStore;
 
   beforeEach(function() {
-    recordStore = new RecordStore('Round Records');
+    recordStore = new RecordStore('Round Records', 'Glasgow');
   });
 
   it('should have a name', function() {
     assert.strictEqual(recordStore.name, 'Round Records');
   });
 
-  xit('should have a city', function() {
+  it('should have a city', function() {
     assert.strictEqual(recordStore.city, 'Glasgow');
   });
 
