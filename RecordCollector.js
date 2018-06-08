@@ -21,4 +21,12 @@ RecordCollector.prototype.totalValue = function() {
   }, 0);
 }
 
+RecordCollector.prototype.totalValueByGenre = function(genre) {
+  const filtered = this.collection.filter(record => record.genre === genre);
+
+  return filtered.reduce(function(acc, record) {
+    return acc + record.price;
+  }, 0)
+}
+
 module.exports = RecordCollector;
