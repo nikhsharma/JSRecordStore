@@ -52,4 +52,10 @@ describe('Record Store', function() {
     assert.strictEqual(recordStore.balance, 1015.99);
     assert.deepStrictEqual(recordStore.inventory, []);
   });
+
+  it('should be able to display financial situation', function() {
+    const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    recordStore.add(record);
+    assert.strictEqual(recordStore.finances(), 'Balance: 1000, Stock Value: 15.99');
+  });
 });
