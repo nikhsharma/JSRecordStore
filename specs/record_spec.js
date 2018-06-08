@@ -6,14 +6,14 @@ describe('Record', function() {
   let record;
 
   beforeEach(function() {
-    record = new Record('Courtney Barnett');
+    record = new Record('Courtney Barnett', 'Tell Me How You Really Feel');
   });
 
   it('should have an artist', function() {
     assert.strictEqual(record.artist, 'Courtney Barnett');
   });
 
-  xit('should a have a title', function() {
+  it('should a have a title', function() {
     assert.strictEqual(record.title, 'Tell Me How You Really Feel');
   });
 
