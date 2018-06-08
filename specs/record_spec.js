@@ -6,7 +6,7 @@ describe('Record', function() {
   let record;
 
   beforeEach(function() {
-    record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'alternative');
+    record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'alternative', 15.99);
   });
 
   it('should have an artist', function() {
@@ -21,7 +21,7 @@ describe('Record', function() {
     assert.strictEqual(record.genre, 'alternative');
   });
 
-  xit('should have a price', function() {
+  it('should have a price', function() {
     assert.strictEqual(record.price, 15.99);
   })
 
