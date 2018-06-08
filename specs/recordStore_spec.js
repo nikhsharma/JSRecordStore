@@ -44,4 +44,12 @@ describe('Record Store', function() {
     recordStore.add(record2);
     assert.strictEqual(recordStore.displayAll().length, 2);
   });
+
+  it('should be able to sell a record', function() {
+    const record = new Record('Courtney Barnett', 'Tell Me How You Really Feel', 'Alternative', 15.99);
+    recordStore.add(record);
+    recordStore.sell(record);
+    assert.strictEqual(recordStore.balance, 1015.99);
+    assert.deepStrictEqual(recordStore.inventory, []);
+  });
 });

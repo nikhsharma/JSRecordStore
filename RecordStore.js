@@ -21,4 +21,9 @@ RecordStore.prototype.displayAll = function() {
   return res;
 }
 
+RecordStore.prototype.sell = function(record) {
+  this.inventory.splice(this.inventory.indexOf(record), 1);
+  this.balance += record.price;
+}
+
 module.exports = RecordStore;
